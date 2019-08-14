@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
 
 const AddedFeature = props => {
   return (
@@ -7,7 +8,7 @@ const AddedFeature = props => {
       <button className="button">X</button>
       {props.feature.name}
     </li>
-  );
-};
+  )
+}
 
-export default AddedFeature;
+export default connect()(AddedFeature)
