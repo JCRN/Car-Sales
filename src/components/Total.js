@@ -1,5 +1,5 @@
 import React from 'react'
-import { coonect } from 'react-redux'
+import { connect } from 'react-redux'
 
 const Total = props => {
   return (

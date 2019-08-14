@@ -1,11 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import { removeFeature } from '../actions'
+
 const AddedFeature = props => {
   return (
     <li>
       {/* Add an onClick to run a function to remove a feature */}
-      <button className="button" onClick="">
+      <button className="button" onClick={props.removeFeature}>
         X
       </button>
       {props.feature.name}
@@ -19,5 +21,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  { removeFeature }
 )(AddedFeature)
