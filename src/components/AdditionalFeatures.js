@@ -20,4 +20,12 @@ const AdditionalFeatures = props => {
   )
 }
 
-export default connect()(AdditionalFeatures)
+const mapStateToProps = state => {
+  return {
+    store: state.store
+  }
+}
+export default connect(
+  mapStateToProps,
+  {}
+)(AdditionalFeatures)
